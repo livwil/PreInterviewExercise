@@ -26,27 +26,28 @@ public class MainPageTest {
     public void setUp() {
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
         Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-        open("https://www.jetbrains.com/");
+        open("https://www.saucedemo.com/");
     }
 
     @Test
-    public void search() {
-        mainPage.searchButton.click();
+    public void Login() {
+        mainPage.usernameInput.sendKeys("standard_user");
+        mainPage.passwordInput.sendKeys("secret_sauce");
+        mainPage.loginButton.click();
+        assertEquals($x("//span[@class='title']").text(), "Products");
+        $x(" //a[@class='shopping_cart_link']").shouldBe(visible);
 
-        $("[data-test='search-input']").sendKeys("Selenium");
-        $("button[data-test='full-search-button']").click();
 
-        $("input[data-test='search-input']").shouldHave(attribute("value", "Selenium"));
     }
 
-    @Test
+    //@Test
     public void toolsMenu() {
         mainPage.toolsMenu.click();
 
         $("div[data-test='main-submenu']").shouldBe(visible);
     }
 
-    @Test
+   // @Test
     public void navigationToAllTools() {
         mainPage.seeDeveloperToolsButton.click();
         mainPage.findYourToolsButton.click();

@@ -11,4 +11,8 @@ public class MainPage {
     public SelenideElement findYourToolsButton = $x("//*[@data-test='suggestion-action']");
     public SelenideElement toolsMenu = $x("//div[@data-test='main-menu-item' and @data-test-marker = 'Developer Tools']");
     public SelenideElement searchButton = $("[data-test='site-header-search-action']");
+    public SelenideElement usernameInput = $x("//input[@id='user-name']");
+    public SelenideElement passwordInput = $x("//input[@id='password']");
+    public SelenideElement loginButton = $x("//input[@id='login-button']");
+
 }

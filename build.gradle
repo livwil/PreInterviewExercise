@@ -15,7 +15,7 @@ ext {
 }
 
 sourceCompatibility = '21'
-targetCompatibility = '19'
+targetCompatibility = '21'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
