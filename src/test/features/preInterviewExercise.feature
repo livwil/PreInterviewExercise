@@ -1,4 +1,4 @@
-Feature: User Login and Shopping Cart
+Feature: User Login and add item to shopping Cart
 
 Scenario: Successful login and adding an item to the cart
   Given the user navigates to the login page

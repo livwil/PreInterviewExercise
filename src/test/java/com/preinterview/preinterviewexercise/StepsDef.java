@@ -38,7 +38,7 @@ public class StepsDef {
 
 
     @And("the user identifies the highest-priced item and add that item to the shopping cart")
-    public void theUserIdentifiesTheHighestPricedItemAndAddThatItemToTheShoppingCart() throws InterruptedException {
+    public void theUserIdentifiesTheHighestPricedItemAndAddThatItemToTheShoppingCart()  {
 
         Double highestPrice = 0.0;
         SelenideElement highestAddToCartBtn = null;
