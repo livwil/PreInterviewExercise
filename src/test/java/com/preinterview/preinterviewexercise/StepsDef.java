@@ -56,7 +56,7 @@ public class StepsDef {
     }
 
     @Then("the item should be successfully added to the cart")
-    public void theItemShouldBeSuccessfullyAddedToTheCart() throws InterruptedException {
+    public void theItemShouldBeSuccessfullyAddedToTheCart() {
         ProductPage.shoppingCartButton.click();
         assertEquals(CheckoutPage.checkoutPageTitle.text(), "Your Cart");
         assertEquals(CheckoutPage.checkoutButton.text(), "Checkout");
